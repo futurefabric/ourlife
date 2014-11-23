@@ -1,5 +1,8 @@
 <h1>Ourlife</h1>
 
+<% if !user_signed_in? %>
+<%= link_to "Create account", 'signup' %> <%= link_to "Login", 'login' %>
+
 <!-- What -->
 <h2>Privately share family moments.</h2>
 <p>A small network just for close family and friends.</p>
@@ -11,10 +14,6 @@
 <!-- How -->
 <h2>Keep what's private, private.</h2>
 <p>Only share moments with the people you choose to.</p>
-
-<% if !user_signed_in? %>
-<%= link_to "Login", 'login' %><br />
-<%= link_to "Sign up", 'signup' %>
 <% end %>
 
 <% if user_signed_in? %>
