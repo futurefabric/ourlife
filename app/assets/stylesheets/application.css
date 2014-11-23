@@ -15,3 +15,115 @@
 
 *= require_self
 */
+
+* {
+  font-family:'Helvetica Neue';
+  line-height:1.35;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  image-rendering:optimizeQuality;
+  max-width:500px;
+}
+
+
+/* Forms */
+form {
+  margin:20px 0 40px 0;
+
+  @include media(tablet) {
+    margin:40px 0 60px 0;
+  }
+}
+
+label {
+  display: block;
+  margin: 18px 0 4px 0;
+  color:$dark_grey;
+}
+
+input,
+input[type="submit"],
+button {
+  width:100%;
+  @include copy;
+  font-family: $verlag;
+  color: $copy_colour;
+  padding:4px 8px;
+  -webkit-appearance: none;
+  border-radius:0;
+  -webkit-border-radius: none;
+  border:1px solid $light_grey;
+}
+
+.firstname,
+.lastname {
+  @include media(tablet) {
+    width:48%;
+    float:left;
+    margin-bottom:20px;
+  }
+}
+
+.firstname {
+  @include media(tablet) {
+    margin-right:4%;
+  }
+}
+
+input[type="submit"],
+.button,
+a.button {
+  padding:10px 20px 8px 20px;
+  margin:20px 0 0 0;
+  width:auto;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -o-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+
+  background-color: $dark_grey;
+  border:none;
+
+  outline:none;
+  moz-outline:none;
+  min-width: 160px;
+
+  @include copy-nav;
+  text-transform: uppercase;
+  color:$white;
+
+  &:hover {
+    background-color: $blue;
+    translate:-3px;
+    cursor:pointer;
+    transition: none;
+    text-decoration: none;
+  }
+}
+
+select {
+  border:none;
+  @include copy-small;
+  font-family:$verlag;
+  color:#222;
+  background-color:#E5E3DF;
+  -webkit-appearance: none;
+  cursor:pointer;
+  padding:8px 35px 6px 18px;
+  border-radius:0;
+  radius:0;
+  background-image: url(../images/select_arrow.png);
+  background-position: 92% center;
+  background-repeat: no-repeat;
+  margin:0 20px 30px 20px;
+  min-width: 160px;
+  display: block;
+
+  @include media(desktop) {
+    margin:0;
+  }
+
+  option {
+
+  }
+}

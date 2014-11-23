@@ -1,2 +1,22 @@
-<h1>Landings#index</h1>
-<p>Find me in app/views/landings/index.html.erb</p>
+<h1>Ourlife</h1>
+
+<!-- What -->
+<h2>Privately share family moments.</h2>
+<p>A small network just for close family and friends.</p>
+
+<!-- Why -->
+<h2>Stay in touch with the people who matter.</h2>
+<p>The most important people to you are not always nearby, bring them closer.</p>
+
+<!-- How -->
+<h2>Keep what's private, private.</h2>
+<p>Only share moments with the people you choose to.</p>
+
+<% if !user_signed_in? %>
+<%= link_to "Login", 'login' %><br />
+<%= link_to "Sign up", 'signup' %>
+<% end %>
+
+<% if user_signed_in? %>
+<%= link_to "Log out", 'signout', :method => :delete %>
+<% end %>
